@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minal Arunashalam</title>
+    <link rel="icon" href="your-favicon.ico">
+    <style>
+        :root {
+            --black: #000;
+            --white: #fff;
+            --red: #e30613;
+            --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; width: 100%; font-family: var(--font-sans); background: var(--white); color: var(--black); }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto;
+            height: 100vh;
+            grid-gap: 2rem;
+            padding: 2rem;
+        }
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            border-right: 2px solid var(--black);
+            padding-right: 2rem;
+        }
+        .sidebar h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: var(--black);
+            display: block;
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        .content {
+            overflow-y: auto;
+            padding-left: 2rem;
+        }
+        section { margin-bottom: 3rem; }
+        h2 {
+            font-size: 1.5rem;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+        ul { list-style: none; }
+        li { margin-bottom: 0.5rem; line-height: 1.4; }
+        .skills span {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .contact a {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--black);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>Minal Arunashalam</h1>
+            <nav>
+                <!-- <a href="#about">About</a>               
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a> -->
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <!-- <a href="#projects">Projects</a> -->
+                <a href="#contact">Contact</a>
+                <a href="Minal_Arunashalam_Resume.pdf" target="_blank">Download Resume</a>
+            </nav>
+        </aside>
+        <main class="content">
+            <section id="about">
+                <h2>About</h2>
+                <p>ML/AI and Software Systems Engineer with a love tackling complex problems—from edge-optimized ml pipelines to autonomous multi-agent systems. 
+                    <br><br>
+                    Passionate about designing, building, and maintaining ai/ml models and the software systems that deliver them at scale.</p>
+            </section>
+            <section id="experience">
+                <h2>Experience</h2>
+                <ul>
+                    <li><strong>ML/AI Engineer Intern</strong> – Connected Things (Startup)<br>Jun–Aug 2024, Jun 2025–Present</li>
+                    <li><strong>Machine Learning Research</strong> – Human-Centric Design Lab, GMU<br>Jan–Nov 2024</li>
+                    <li><strong>Lead Developer</strong> – US Naval Research Lab (GMU Partnership)<br>Sept 2023–May 2024</li>
+                    <li><strong>Generative AI Extern</strong> – Cognizant<br>Jun–Jul 2024</li>
+                    <li><strong>Teaching Assistant</strong> – College of Engineering, GMU<br>Sept 2023–May 2025</li>
+                </ul>
+            </section>
+            <section id="skills" class="skills">
+                <h2>Technical Skills</h2>
+                <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span>
+                <span>HTML/CSS</span><span>Bash</span><span>PyTorch</span><span>TensorFlow</span><span>React</span><span>FastAPI</span>
+                <span>Docker</span><span>Kubernetes</span><span>AWS</span><span>Terraform</span>
+            </section>
+
+             <section id="education">
+                <h2>Education</h2>
+                <ul>
+                <li><strong>George Mason University – Honors College</strong><br>MS in Computer Science – ML Concentration, Aug 2024 – May 2026</li>
+                <li><strong>George Mason University – Honors College</strong><br>BS in Computer Science, Aug 2022 – May 2025</li>
+                <li><strong>University of Texas at Austin</strong><br>Certificate in AI and Machine Learning, May 2024 – May 2025</li>
+                <li><strong>INSEAD – France</strong><br>Summer Programme on Business Strategy, Innovation, and Leadership, Jul – Aug 2025</li>
+                </ul>
+            </section>
+
+            
+            <!-- <section id="projects">
+                <h2>Projects</h2>
+                <ul>
+                    <li><strong>Bank Churn Prediction Model</strong> – UT Austin Certificate in AI & ML<br>93% F1-score, 98% recall.</li>
+                </ul>
+            </section> -->
+            <section id="contact" class="contact">
+                <h2>Contact</h2>
+                <a href="mailto:minal.shalam@gmail.com">minal.shalam@gmail.com</a>
+                <a href="https://linkedin.com/in/minal12" target="_blank">linkedin.com/in/minal12</a>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
