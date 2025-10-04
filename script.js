@@ -84,7 +84,7 @@ function typeWriter(element, text, speed = 100) {
 // Initialize typing animation when page loads
 window.addEventListener('load', () => {
     const titleLines = document.querySelectorAll('.title-line');
-    const texts = ['Think different.', 'Build intelligent.'];
+    const texts = ['Think like a founder.', 'Build like an engineer.'];
     
     titleLines.forEach((line, index) => {
         setTimeout(() => {
