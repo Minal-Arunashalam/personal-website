@@ -200,8 +200,12 @@ const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
-// Check for saved theme preference or default to 'light'
-const currentTheme = localStorage.getItem('theme') || 'light';
+// Force dark mode as default, override any existing light mode preference
+let currentTheme = localStorage.getItem('theme');
+if (!currentTheme || currentTheme === 'light') {
+    currentTheme = 'dark';
+    localStorage.setItem('theme', 'dark');
+}
 document.documentElement.setAttribute('data-theme', currentTheme);
 
 // Update icon based on current theme
@@ -219,7 +223,7 @@ updateThemeIcon(currentTheme);
 // Theme toggle event listener
 themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
     console.log('Switching theme from', currentTheme, 'to', newTheme);
     
