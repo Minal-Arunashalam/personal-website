@@ -250,38 +250,8 @@ document.querySelectorAll('.principle').forEach(principle => {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('.form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
-        
-        // Simple validation
-        if (!name || !email || !message) {
-            showNotification('Please fill in all fields', 'error');
-            return;
-        }
-        
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('.btn-primary');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            contactForm.reset();
-            showNotification('Message sent successfully!', 'success');
-        }, 2000);
-    });
-}
+// Simple form submission - let Formspree handle everything
+console.log('Contact form ready - using native HTML submission to Formspree');
 
 // Notification system
 function showNotification(message, type = 'info') {
