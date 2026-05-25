@@ -1,389 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minal | AI/ML Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minal Arunashalam</title>
+  <meta name="description" content="AI/ML Engineer building production ML systems and intelligent agents.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #fafaf8;
+      --text: #141414;
+      --muted: #666;
+      --subtle: #999;
+      --accent: #2563eb;
+      --border: #e6e6e2;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 36px 28px 0;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.15s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    /* ── Main wrapper ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 28px 96px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 60px 0 52px;
+    }
+
+    .avatar {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: var(--text);
+      color: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin-bottom: 28px;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .hero h1 {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .hero .tagline {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    .hero .tagline a {
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+
+    .hero .tagline a:hover { color: var(--text); }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0;
+    }
+
+    /* ── Sections ── */
+    section {
+      padding: 48px 0 0;
+    }
+
+    section > h2 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--subtle);
+      margin-bottom: 32px;
+    }
+
+    /* ── Entry ── */
+    .entry {
+      margin-bottom: 40px;
+    }
+
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .entry h3 {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .entry .date {
+      font-size: 13px;
+      color: var(--subtle);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entry p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.72;
+      margin-bottom: 10px;
+    }
+
+    .entry p:last-of-type { margin-bottom: 0; }
+
+    .entry .sub {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    /* ── Tags ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      font-size: 12px;
+      padding: 3px 11px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Skills grid ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      row-gap: 14px;
+      column-gap: 28px;
+    }
+
+    .skill-label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      padding-top: 1px;
+    }
+
+    .skill-value {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 28px 28px 56px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--subtle);
+    }
+
+    footer a {
+      color: var(--subtle);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    footer a:hover { color: var(--text); }
+
+    /* ── Global link ── */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      nav { gap: 20px; padding: 28px 20px 0; }
+      main { padding: 0 20px 80px; }
+      footer { padding: 24px 20px 48px; }
+
+      .hero { padding: 48px 0 40px; }
+      .hero h1 { font-size: 22px; }
+
+      .entry-header { flex-direction: column; gap: 2px; }
+      .entry .date { font-size: 12px; }
+
+      .skills-grid { grid-template-columns: 1fr; row-gap: 4px; }
+      .skill-label { margin-top: 14px; }
+      .skill-label:first-child { margin-top: 0; }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#home" class="nav-brand">Minal</a>
-            <div class="nav-links" id="nav-menu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <a href="#contact" class="btn btn-outline btn-sm nav-cta">Get in touch</a>
-            <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
+  <nav>
+    <a href="https://linkedin.com/in/minal-arunashalam" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/Minal-Arunashalam" target="_blank" rel="noopener">GitHub</a>
+    <a href="mailto:minal.shalam@gmail.com">Email</a>
+    <a href="/Minal_Arunashalam_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+  </nav>
+
+  <main>
 
     <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-left">
-                    <p class="eyebrow">AI / ML Engineer</p>
-                    <h1>Think like a founder.<br>Build like an engineer.</h1>
-                    <p class="hero-sub">MS Machine Learning student at GMU. I've built everything from Gen AI accelerators for startup teams, to production MLOps pipelines serving 200+ banks.</p>
-                    <div class="hero-btns">
-                        <a href="#projects" class="btn btn-primary">View my work</a>
-                        <a href="#contact" class="btn btn-ghost">Get in touch &rarr;</a>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    <div class="portrait-frame">
-                        <img src="portrait.jpeg" alt="Minal — AI/ML Engineer" class="portrait-img">
-                    </div>
-                </div>
-            </div>
+    <div class="hero">
+      <div class="avatar" aria-hidden="true">MA</div>
+      <h1>Minal Arunashalam</h1>
+      <p class="tagline">
+        AI/ML Engineer at <a href="https://strategycorps.com" target="_blank" rel="noopener">StrategyCorps</a>, building production ML systems for banking.
+        MS candidate in Computer Science (Machine Learning) at George Mason University.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- Building -->
+    <section id="building" aria-label="Building">
+      <h2>Building</h2>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Production ML for Banking — StrategyCorps</h3>
+          <span class="date">Feb 2025 – Present</span>
         </div>
+        <p>
+          Building ML infrastructure that powers 300+ banks. Started with a merchant name extraction model in Databricks —
+          full MLOps setup with drift detection, LLM pseudo-labeling, human-in-the-loop review, and automatic
+          champion-challenger deployment at 99% classification accuracy across 1k+ merchants.
+        </p>
+        <p>
+          Designed an LLM pipeline that classifies uncategorized product and transaction codes from core banking data,
+          cutting FI onboarding time and eliminating 90% of manual workload. Currently building a conversational analytics
+          agent using LangGraph, Databricks MCP, and Qdrant/Azure for RAG — deployed via MLFlow with a Vercel AI SDK frontend.
+        </p>
+        <div class="tags">
+          <span class="tag">Databricks</span>
+          <span class="tag">MLFlow</span>
+          <span class="tag">LangGraph</span>
+          <span class="tag">RAG</span>
+          <span class="tag">XGBoost</span>
+          <span class="tag">SHAP</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Drone & UUV Simulation — US Naval Research Lab</h3>
+          <span class="date">Sep 2024 – May 2025</span>
+        </div>
+        <p>
+          Lead Software Engineer on a GMU partnership with the Naval Research Lab. Engineered 3D drone and
+          underwater vehicle dynamics in Pyquaticus, enabling multi-axis deep reinforcement learning training
+          for naval simulation. Built 200+ unit and integration tests for full dynamics coverage.
+        </p>
+        <div class="tags">
+          <span class="tag">Pyquaticus</span>
+          <span class="tag">Deep RL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Simulation</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Automated API Documentation — Connected Things</h3>
+          <span class="date">Jun 2025 – Aug 2025</span>
+        </div>
+        <p>
+          Built a multi-model LLM system (LangGraph + Gemini + FastAPI + Celery + Redis) that automates
+          API documentation generation, reducing manual developer effort by 95%. Deployed on AWS with
+          SQS + Lambda, EC2/Redis secured in a private VPC, 99.9% uptime.
+        </p>
+        <p>
+          Also implemented link prediction models on Wikidata — GraphSAGE, R-GCN, Autoencoder, XGBoost, and
+          TransE — evaluated using MRR and Hits@10.
+        </p>
+        <div class="tags">
+          <span class="tag">LangGraph</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">GraphSAGE</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>On-Device ML Research — GMU Human-Centric Design Lab</h3>
+          <span class="date">Jan 2024 – Nov 2024</span>
+        </div>
+        <p>
+          Quantized a CNN model to TensorFlow Lite, hitting ~95% accuracy with under 50ms inference latency
+          on-device. Automated deployment via FastAPI + Docker on AWS EC2 with Prometheus/Grafana monitoring
+          and GitHub Actions CI/CD.
+        </p>
+        <div class="tags">
+          <span class="tag">TensorFlow Lite</span>
+          <span class="tag">Quantization</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Prometheus</span>
+          <span class="tag">AWS EC2</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>LoRA Fine-Tuning for Financial NLP — Cognizant</h3>
+          <span class="date">Jun 2024 – Jul 2024</span>
+        </div>
+        <p>
+          Applied LoRA-based parameter-efficient fine-tuning on GPT-2 for financial sentiment classification —
+          92% accuracy with ~98% fewer trainable parameters.
+        </p>
+        <div class="tags">
+          <span class="tag">LoRA</span>
+          <span class="tag">GPT-2</span>
+          <span class="tag">PEFT</span>
+          <span class="tag">NLP</span>
+        </div>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section section-alt">
-        <div class="container">
-            <span class="section-eyebrow">About</span>
-            <div class="about-layout">
-                <div class="about-main">
-                    <h2>The journey so far</h2>
-                    <p>I started my journey in 2022, as a freshman in CS at GMU. In three years I've gone from not knowing how to code to building production systems and complex ML models. Now, I'm a 2x ML/AI Engineer intern, and will be graduating in May 2026 with a BS in CS and MS in ML from GMU, and Graduate Certificate in AI from UT Austin.</p>
+    <hr>
 
-                    <div class="focus-areas">
-                        <div class="focus-item">
-                            <span class="focus-num">01</span>
-                            <span class="focus-label">ML/AI Engineering</span>
-                        </div>
-                        <div class="focus-item">
-                            <span class="focus-num">02</span>
-                            <span class="focus-label">ML/AI Ops &amp; Infra</span>
-                        </div>
-                        <div class="focus-item">
-                            <span class="focus-num">03</span>
-                            <span class="focus-label">AI Product Management</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Teaching -->
+    <section id="teaching" aria-label="Teaching">
+      <h2>Teaching</h2>
 
-                <div class="about-stats">
-                    <div class="stat-box">
-                        <span class="stat-val">2</span>
-                        <span class="stat-lbl">Degrees</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-val">2</span>
-                        <span class="stat-lbl">ML/AI Internships</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-val">10+</span>
-                        <span class="stat-lbl">AI/ML projects built</span>
-                    </div>
-                </div>
-            </div>
+      <div class="entry">
+        <div class="entry-header">
+          <h3>Teaching Assistant — GMU College of Engineering</h3>
+          <span class="date">Sep 2023 – May 2025</span>
         </div>
+        <p>
+          Instructed 2,000+ students across 4 semesters in Python, Java, and C.
+          Focused on object-oriented programming, test-driven development, and building
+          strong CS fundamentals from the ground up.
+        </p>
+      </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" class="section">
-        <div class="container">
-            <span class="section-eyebrow">Experience</span>
-            <h2>Work history</h2>
+    <hr>
 
-            <div class="exp-list">
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Sep 2025 – Present</span>
-                        <span class="exp-company">StrategyCorps</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>ML Engineer Intern</h3>
-                        <p>Designing and building production MLOps pipeline serving 300+ banks with automated training, deployment, and monitoring. Achieved 99% uptime with scalable support for millions of records daily.</p>
-                        <div class="tags">
-                            <span class="tag">MLOps</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">AWS</span>
-                            <span class="tag">Docker</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- Education -->
+    <section id="education" aria-label="Education">
+      <h2>Education</h2>
 
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Jun 2025 – Aug 2025</span>
-                        <span class="exp-company">Connected Things</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>AI Engineer Intern</h3>
-                        <p>Built modular MLflow pipeline for GraphSAGE, Autoencoder, and TransE models, cutting experiment setup time 70%. Automated API documentation with LLM system reducing manual effort by 95%. Deployed on AWS with SQS + Lambda achieving 99.9% uptime.</p>
-                        <div class="tags">
-                            <span class="tag">MLflow</span>
-                            <span class="tag">LangGraph</span>
-                            <span class="tag">Gemini</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">AWS Lambda</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Sep 2023 – May 2025</span>
-                        <span class="exp-company">GMU – College of Engineering</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>Teaching Assistant</h3>
-                        <p>Instructed 2,000+ students across 4 semesters in Python, Java, and C, emphasizing object-oriented programming and test-driven development methodologies.</p>
-                        <div class="tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">C</span>
-                            <span class="tag">OOP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Sep 2024 – May 2025</span>
-                        <span class="exp-company">US Naval Research Lab</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>Lead Software Engineer</h3>
-                        <p>Engineered 3D drone &amp; UUV dynamics in Pyquaticus for multi-axis DRL agent training. Created 200+ unit/integration tests achieving full coverage of drone/UUV dynamics and ensuring reliability.</p>
-                        <div class="tags">
-                            <span class="tag">Deep RL</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Testing</span>
-                            <span class="tag">Robotics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Jan 2024 – Nov 2024</span>
-                        <span class="exp-company">Human-Centric Design Lab – GMU</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>ML Research Assistant</h3>
-                        <p>Quantized CNN to TensorFlow Lite achieving ~95% accuracy with &lt;50ms inference latency. Automated deployment of FastAPI + Docker model on AWS EC2 with Prometheus/Grafana monitoring and GitHub Actions updates.</p>
-                        <div class="tags">
-                            <span class="tag">TensorFlow Lite</span>
-                            <span class="tag">FastAPI</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">AWS EC2</span>
-                            <span class="tag">Prometheus</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="exp-card reveal">
-                    <div class="exp-meta">
-                        <span class="exp-period">Jun 2024 – Jul 2024</span>
-                        <span class="exp-company">Cognizant</span>
-                    </div>
-                    <div class="exp-body">
-                        <h3>Generative AI Extern</h3>
-                        <p>Applied LoRA-based parameter-efficient fine-tuning on GPT-2 for financial sentiment classification, achieving 92% accuracy with ~98% fewer trainable parameters.</p>
-                        <div class="tags">
-                            <span class="tag">LoRA</span>
-                            <span class="tag">GPT-2</span>
-                            <span class="tag">Fine-tuning</span>
-                            <span class="tag">NLP</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="entry">
+        <div class="entry-header">
+          <h3>George Mason University</h3>
+          <span class="date">May 2026</span>
         </div>
+        <p>M.S. Computer Science — Machine Learning Concentration &nbsp;·&nbsp; GPA 3.67</p>
+        <p class="sub">Advanced NLP · Advanced ML · Deep Learning · DevOps (Kubernetes, Terraform, Ansible, AWS)</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>George Mason University — Honors College</h3>
+          <span class="date">May 2025</span>
+        </div>
+        <p>B.S. Computer Science &nbsp;·&nbsp; Cum Laude</p>
+        <p class="sub">Data Structures & Algorithms · Operating Systems · Databases · Networking · Low-Level Programming</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <h3>The University of Texas at Austin</h3>
+          <span class="date">Feb 2025</span>
+        </div>
+        <p>Certificate in Artificial Intelligence and Machine Learning &nbsp;·&nbsp; GPA 3.89/4.0</p>
+        <p class="sub">Generative AI · Computer Vision · Model Deployment · Big Data Analytics (Spark, Kafka) · AI on Cloud</p>
+      </div>
     </section>
+
+    <hr>
 
     <!-- Skills -->
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <span class="section-eyebrow">Expertise</span>
-            <h2>Technical skills</h2>
+    <section id="skills" aria-label="Skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span class="skill-label">Languages</span>
+        <span class="skill-value">Python, Java, C, JavaScript, TypeScript, SQL, HTML/CSS</span>
 
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <h3>Languages &amp; Frameworks</h3>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">C</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">HTML/CSS</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <h3>ML &amp; AI Frameworks</h3>
-                    <div class="tags">
-                        <span class="tag">PyTorch</span>
-                        <span class="tag">TensorFlow</span>
-                        <span class="tag">scikit-learn</span>
-                        <span class="tag">NumPy</span>
-                        <span class="tag">OpenCV</span>
-                        <span class="tag">LangChain</span>
-                        <span class="tag">LangGraph</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <h3>DevOps &amp; Tools</h3>
-                    <div class="tags">
-                        <span class="tag">Git</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Kubernetes</span>
-                        <span class="tag">Terraform</span>
-                        <span class="tag">Spark</span>
-                        <span class="tag">MLFlow</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <h3>Cloud &amp; Databases</h3>
-                    <div class="tags">
-                        <span class="tag">AWS</span>
-                        <span class="tag">GCP</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Databricks</span>
-                        <span class="tag">Flask</span>
-                        <span class="tag">React</span>
-                        <span class="tag">FastAPI</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <span class="skill-label">Frameworks</span>
+        <span class="skill-value">PyTorch, TensorFlow, scikit-learn, NumPy, OpenCV, Flask, React, FastAPI, LangChain, LangGraph</span>
+
+        <span class="skill-label">Tools</span>
+        <span class="skill-value">Git, Docker, Kubernetes, Terraform, Spark, MLFlow, MongoDB, PostgreSQL, AWS, GCP, Databricks</span>
+      </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-        <div class="container">
-            <span class="section-eyebrow">Projects</span>
-            <h2>Things I've built</h2>
+  </main>
 
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-top">
-                        <div class="project-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                                <circle cx="12" cy="12" r="3"/>
-                            </svg>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="icon-btn" aria-label="View on GitHub">
-                                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                                </svg>
-                            </a>
-                            <a href="#" class="icon-btn" aria-label="View live project">
-                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                                    <polyline points="15 3 21 3 21 9"/>
-                                    <line x1="10" y1="14" x2="21" y2="3"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <h3>Feynman Voice Tutor</h3>
-                    <p>Built an AI voice tutor in Python/Streamlit with OpenAI APIs for real-time STT, GPT responses, and TTS feedback. Cut response latency to ~3s via short audio chunks, streaming TTS, and compact context windows.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Streamlit</span>
-                        <span class="tag">OpenAI API</span>
-                        <span class="tag">STT/TTS</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer>
+    Minal Arunashalam &nbsp;·&nbsp; Aldie, VA &nbsp;·&nbsp;
+    <a href="mailto:minal.shalam@gmail.com">minal.shalam@gmail.com</a>
+  </footer>
 
-    <!-- Contact -->
-    <section id="contact" class="section section-alt">
-        <div class="container">
-            <span class="section-eyebrow">Contact</span>
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <h2>Let's build something important</h2>
-                    <p>Currently pursuing MS in Machine Learning at GMU. Always excited to discuss AI/ML, startups, sports, cars, and a lot more.</p>
-
-                    <div class="contact-links">
-                        <a href="mailto:minal.shalam@gmail.com" class="contact-link">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                            </svg>
-                            minal.shalam@gmail.com
-                        </a>
-                        <a href="https://linkedin.com/in/minal12" class="contact-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                            LinkedIn
-                        </a>
-                        <a href="https://github.com/Minal-Arunashalam" class="contact-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                            GitHub
-                        </a>
-                        <a href="https://twitter.com/minal" class="contact-link" target="_blank" rel="noopener noreferrer">
-                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.849L1.254 2.25H8.08l4.264 5.638 5.9-5.638zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                            Twitter
-                        </a>
-                    </div>
-                </div>
-
-                <form action="https://formspree.io/f/xrbyywqd" method="POST" class="contact-form" id="contact-form">
-                    <div class="form-row">
-                        <label class="form-label" for="name">Name</label>
-                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
-                    </div>
-                    <div class="form-row">
-                        <label class="form-label" for="email">Email</label>
-                        <input type="email" id="email" name="_replyto" class="form-input" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-row">
-                        <label class="form-label" for="message">Message</label>
-                        <textarea id="message" name="message" class="form-input" rows="5" placeholder="What's on your mind?" required></textarea>
-                    </div>
-                    <input type="hidden" name="_subject" value="New contact from your website">
-                    <button type="submit" class="btn btn-primary btn-block">Send message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-copy">&copy; 2025 Minal</span>
-                <nav class="footer-nav" aria-label="Footer navigation">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
