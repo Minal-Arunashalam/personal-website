@@ -1,256 +1,206 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minal | AI/ML Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background Elements -->
-    <div class="background">
-        <div class="gradient-orb orb-1"></div>
-        <div class="gradient-orb orb-2"></div>
-        <div class="gradient-orb orb-3"></div>
-        <div class="floating-particles"></div>
-    </div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Minal</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
+            <a href="#home" class="nav-brand">Minal</a>
+            <div class="nav-links" id="nav-menu">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
-            <div class="theme-toggle" id="theme-toggle">
-                <i class="fas fa-moon" id="theme-icon"></i>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <a href="#contact" class="btn btn-outline btn-sm nav-cta">Get in touch</a>
+            <button class="hamburger" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="title-line">Think like a founder.</span>
-                        <span class="title-line">Build like an engineer.</span>
-                    </h1>
-                    <p class="hero-description">
-                        MS Machine Learning student at GMU. I've built everything from Gen AI accelerators for startup teams, to production MLOps pipelines serving 200+ banks. 
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            Get In Touch
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-image">
-                        <img src="portrait.jpeg" alt="Minal - AI/ML Engineer" class="portrait-image">
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="scroll-arrow"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About</h2>
-                <!-- <p class="section-subtitle">Blending engineering discipline with startup speed</p> -->
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="glass-card">
-                        <h3>Journey</h3>
-                        <p>
-                            I started my journey in 2022, as a freshman in CS at GMU. 
-                            In three years I've gone from not knowing how to code to building production systems and complex ML models.
-                            Now, I'm a 2x ML/AI Engineer intern, and will be graduating in May 2026 with a BS in CS and MS in ML from GMU, and Graduate Certificate in AI from UT Austin.
-                            
-                        </p>
-                        <div class="stats">
-                            <div class="stat">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">Degrees</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">ML/AI Internships</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">10+</span>
-                                <span class="stat-label">AI/ML projects built</span>
-                            </div>
-                        </div>
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <p class="eyebrow">AI / ML Engineer</p>
+                    <h1>Think like a founder.<br>Build like an engineer.</h1>
+                    <p class="hero-sub">MS Machine Learning student at GMU. I've built everything from Gen AI accelerators for startup teams, to production MLOps pipelines serving 200+ banks.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View my work</a>
+                        <a href="#contact" class="btn btn-ghost">Get in touch &rarr;</a>
                     </div>
                 </div>
-                <div class="about-visual">
-                    <div class="philosophy-visual">
-                        <div class="principle">
-                            <div class="principle-icon">
-                                <div class="icon-circle">
-                                    <span>01</span>
-                                </div>
-                            </div>
-                            <h4>ML/AI Engineering</h4>
-                            <!-- <p>Complex problems deserve elegant solutions</p> -->
-                        </div>
-                        <div class="principle">
-                            <div class="principle-icon">
-                                <div class="icon-circle">
-                                    <span>02</span>
-                                </div>
-                            </div>
-                            <h4>ML/AI Ops & Infra</h4>
-                            <!-- <p>Push boundaries with purposeful creativity</p> -->
-                        </div>
-                        <div class="principle">
-                            <div class="principle-icon">
-                                <div class="icon-circle">
-                                    <span>03</span>
-                                </div>
-                            </div>
-                            <h4>AI Product Management</h4>
-                            <!-- <p>Build technology that truly matters</p> -->
-                        </div>
+                <div class="hero-right">
+                    <div class="portrait-frame">
+                        <img src="portrait.jpeg" alt="Minal — AI/ML Engineer" class="portrait-img">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <!-- About -->
+    <section id="about" class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <!-- <p class="section-subtitle">Building the future, one system at a time</p> -->
-            </div>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Sep 2025 – Present</div>
-                            <div class="experience-company">StrategyCorps</div>
+            <span class="section-eyebrow">About</span>
+            <div class="about-layout">
+                <div class="about-main">
+                    <h2>The journey so far</h2>
+                    <p>I started my journey in 2022, as a freshman in CS at GMU. In three years I've gone from not knowing how to code to building production systems and complex ML models. Now, I'm a 2x ML/AI Engineer intern, and will be graduating in May 2026 with a BS in CS and MS in ML from GMU, and Graduate Certificate in AI from UT Austin.</p>
+
+                    <div class="focus-areas">
+                        <div class="focus-item">
+                            <span class="focus-num">01</span>
+                            <span class="focus-label">ML/AI Engineering</span>
                         </div>
+                        <div class="focus-item">
+                            <span class="focus-num">02</span>
+                            <span class="focus-label">ML/AI Ops &amp; Infra</span>
+                        </div>
+                        <div class="focus-item">
+                            <span class="focus-num">03</span>
+                            <span class="focus-label">AI Product Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <span class="stat-val">2</span>
+                        <span class="stat-lbl">Degrees</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-val">2</span>
+                        <span class="stat-lbl">ML/AI Internships</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-val">10+</span>
+                        <span class="stat-lbl">AI/ML projects built</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <span class="section-eyebrow">Experience</span>
+            <h2>Work history</h2>
+
+            <div class="exp-list">
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Sep 2025 – Present</span>
+                        <span class="exp-company">StrategyCorps</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>ML Engineer Intern</h3>
                         <p>Designing and building production MLOps pipeline serving 300+ banks with automated training, deployment, and monitoring. Achieved 99% uptime with scalable support for millions of records daily.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">MLOps</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Docker</span>
+                        <div class="tags">
+                            <span class="tag">MLOps</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">Docker</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Jun 2025 – Aug 2025</div>
-                            <div class="experience-company">Connected Things</div>
-                        </div>
+
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Jun 2025 – Aug 2025</span>
+                        <span class="exp-company">Connected Things</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>AI Engineer Intern</h3>
                         <p>Built modular MLflow pipeline for GraphSAGE, Autoencoder, and TransE models, cutting experiment setup time 70%. Automated API documentation with LLM system reducing manual effort by 95%. Deployed on AWS with SQS + Lambda achieving 99.9% uptime.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">MLflow</span>
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">Gemini</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">AWS Lambda</span>
+                        <div class="tags">
+                            <span class="tag">MLflow</span>
+                            <span class="tag">LangGraph</span>
+                            <span class="tag">Gemini</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">AWS Lambda</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Sep 2023 – May 2025</div>
-                            <div class="experience-company">GMU - College of Engineering</div>
-                        </div>
+
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Sep 2023 – May 2025</span>
+                        <span class="exp-company">GMU – College of Engineering</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>Teaching Assistant</h3>
                         <p>Instructed 2,000+ students across 4 semesters in Python, Java, and C, emphasizing object-oriented programming and test-driven development methodologies.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">C</span>
-                            <span class="tech-tag">OOP</span>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">C</span>
+                            <span class="tag">OOP</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Sep 2024 – May 2025</div>
-                            <div class="experience-company">US Naval Research Lab</div>
-                        </div>
+
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Sep 2024 – May 2025</span>
+                        <span class="exp-company">US Naval Research Lab</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>Lead Software Engineer</h3>
-                        <p>Engineered 3D drone & UUV dynamics in Pyquaticus for multi-axis DRL agent training. Created 200+ unit/integration tests achieving full coverage of drone/UUV dynamics and ensuring reliability.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">Deep RL</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Testing</span>
-                            <span class="tech-tag">Robotics</span>
+                        <p>Engineered 3D drone &amp; UUV dynamics in Pyquaticus for multi-axis DRL agent training. Created 200+ unit/integration tests achieving full coverage of drone/UUV dynamics and ensuring reliability.</p>
+                        <div class="tags">
+                            <span class="tag">Deep RL</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Testing</span>
+                            <span class="tag">Robotics</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Jan 2024 – Nov 2024</div>
-                            <div class="experience-company">Human-Centric Design Lab – GMU</div>
-                        </div>
+
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Jan 2024 – Nov 2024</span>
+                        <span class="exp-company">Human-Centric Design Lab – GMU</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>ML Research Assistant</h3>
-                        <p>Quantized CNN to TensorFlow Lite achieving ~95% accuracy with <50ms inference latency. Automated deployment of FastAPI + Docker model on AWS EC2 with Prometheus/Grafana monitoring and GitHub Actions updates.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">TensorFlow Lite</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">AWS EC2</span>
-                            <span class="tech-tag">Prometheus</span>
+                        <p>Quantized CNN to TensorFlow Lite achieving ~95% accuracy with &lt;50ms inference latency. Automated deployment of FastAPI + Docker model on AWS EC2 with Prometheus/Grafana monitoring and GitHub Actions updates.</p>
+                        <div class="tags">
+                            <span class="tag">TensorFlow Lite</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS EC2</span>
+                            <span class="tag">Prometheus</span>
                         </div>
                     </div>
                 </div>
-                
-                <div class="experience-item">
-                    <div class="glass-card">
-                        <div class="experience-header">
-                            <div class="experience-period">Jun 2024 – Jul 2024</div>
-                            <div class="experience-company">Cognizant</div>
-                        </div>
+
+                <div class="exp-card reveal">
+                    <div class="exp-meta">
+                        <span class="exp-period">Jun 2024 – Jul 2024</span>
+                        <span class="exp-company">Cognizant</span>
+                    </div>
+                    <div class="exp-body">
                         <h3>Generative AI Extern</h3>
                         <p>Applied LoRA-based parameter-efficient fine-tuning on GPT-2 for financial sentiment classification, achieving 92% accuracy with ~98% fewer trainable parameters.</p>
-                        <div class="experience-tech">
-                            <span class="tech-tag">LoRA</span>
-                            <span class="tech-tag">GPT-2</span>
-                            <span class="tech-tag">Fine-tuning</span>
-                            <span class="tech-tag">NLP</span>
+                        <div class="tags">
+                            <span class="tag">LoRA</span>
+                            <span class="tag">GPT-2</span>
+                            <span class="tag">Fine-tuning</span>
+                            <span class="tag">NLP</span>
                         </div>
                     </div>
                 </div>
@@ -258,168 +208,162 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Expertise</h2>
-                <!-- <p class="section-subtitle">Mastery through focus</p> -->
-            </div>
+            <span class="section-eyebrow">Expertise</span>
+            <h2>Technical skills</h2>
+
             <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="glass-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Languages & Frameworks</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                        </div>
+                <div class="skill-card reveal">
+                    <h3>Languages &amp; Frameworks</h3>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">HTML/CSS</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="glass-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>ML & AI Frameworks</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">TensorFlow</span>
-                            <span class="skill-tag">scikit-learn</span>
-                            <span class="skill-tag">NumPy</span>
-                            <span class="skill-tag">OpenCV</span>
-                            <span class="skill-tag">LangChain</span>
-                            <span class="skill-tag">LangGraph</span>
-                        </div>
+                <div class="skill-card reveal">
+                    <h3>ML &amp; AI Frameworks</h3>
+                    <div class="tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">NumPy</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">LangChain</span>
+                        <span class="tag">LangGraph</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="glass-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>DevOps & Tools</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Docker</span>
-                            <span class="skill-tag">Kubernetes</span>
-                            <span class="skill-tag">Terraform</span>
-                            <span class="skill-tag">Spark</span>
-                            <span class="skill-tag">MLFlow</span>
-                        </div>
+                <div class="skill-card reveal">
+                    <h3>DevOps &amp; Tools</h3>
+                    <div class="tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">Spark</span>
+                        <span class="tag">MLFlow</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <div class="glass-card">
-                        <div class="skill-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3>Cloud & Databases</h3>
-                        <div class="skill-list">
-                            <span class="skill-tag">AWS</span>
-                            <span class="skill-tag">GCP</span>
-                            <span class="skill-tag">MongoDB</span>
-                            <span class="skill-tag">PostgreSQL</span>
-                            <span class="skill-tag">Databricks</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">FastAPI</span>
-                        </div>
+                <div class="skill-card reveal">
+                    <h3>Cloud &amp; Databases</h3>
+                    <div class="tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">Databricks</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">React</span>
+                        <span class="tag">FastAPI</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Projects -->
+    <section id="projects" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projects</h2>
-                <!-- <p class="section-subtitle">Ideas made real</p> -->
-            </div>
+            <span class="section-eyebrow">Projects</span>
+            <h2>Things I've built</h2>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="glass-card">
-                        <div class="project-header">
-                            <div class="project-icon">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
+                <div class="project-card reveal">
+                    <div class="project-top">
+                        <div class="project-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
                         </div>
-                        <h3>Feynman Voice Tutor</h3>
-                        <p>Built an AI voice tutor in Python/Streamlit with OpenAI APIs for real-time STT, GPT responses, and TTS feedback. Cut response latency to ~3s via short audio chunks, streaming TTS, and compact context windows.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">STT/TTS</span>
+                        <div class="project-links">
+                            <a href="#" class="icon-btn" aria-label="View on GitHub">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="icon-btn" aria-label="View live project">
+                                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                    <polyline points="15 3 21 3 21 9"/>
+                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                </svg>
+                            </a>
                         </div>
+                    </div>
+                    <h3>Feynman Voice Tutor</h3>
+                    <p>Built an AI voice tutor in Python/Streamlit with OpenAI APIs for real-time STT, GPT responses, and TTS feedback. Cut response latency to ~3s via short audio chunks, streaming TTS, and compact context windows.</p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">OpenAI API</span>
+                        <span class="tag">STT/TTS</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Connect</h2>
-                <!-- <p class="section-subtitle">Let's build something important</p> -->
-            </div>
-            <div class="contact-content">
+            <span class="section-eyebrow">Contact</span>
+            <div class="contact-layout">
                 <div class="contact-info">
-                    <div class="glass-card">
-                        <h3>Let's Build Something Important</h3>
-                        <p>Currently pursuing MS in Machine Learning at GMU. Always excited to discuss AI/ML, startups, sports, cars, and a lot more.</p>
-                        <div class="contact-methods">
-                            <a href="mailto:minal.shalam@gmail.com" class="contact-method">
-                                <i class="fas fa-envelope"></i>
-                                <span>minal.shalam@gmail.com</span>
-                            </a>
-                            <a href="https://linkedin.com/in/minal12" class="contact-method">
-                                <i class="fab fa-linkedin"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                            <a href="https://github.com/Minal-Arunashalam" class="contact-method">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </a>
-                            <a href="https://twitter.com/minal" class="contact-method">
-                                <i class="fab fa-twitter"></i>
-                                <span>Twitter</span>
-                            </a>
-                        </div>
+                    <h2>Let's build something important</h2>
+                    <p>Currently pursuing MS in Machine Learning at GMU. Always excited to discuss AI/ML, startups, sports, cars, and a lot more.</p>
+
+                    <div class="contact-links">
+                        <a href="mailto:minal.shalam@gmail.com" class="contact-link">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                            </svg>
+                            minal.shalam@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/minal12" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/Minal-Arunashalam" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://twitter.com/minal" class="contact-link" target="_blank" rel="noopener noreferrer">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.849L1.254 2.25H8.08l4.264 5.638 5.9-5.638zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                            Twitter
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <div class="glass-card">
-                        <form action="https://formspree.io/f/xrbyywqd" method="POST" class="form" id="contact-form">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-input" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="_replyto" class="form-input" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea name="message" class="form-input" rows="5" placeholder="Your Message" required></textarea>
-                            </div>
-                            <input type="hidden" name="_subject" value="New contact from your website" />
-                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                        </form>
+
+                <form action="https://formspree.io/f/xrbyywqd" method="POST" class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
                     </div>
-                </div>
+                    <div class="form-row">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" name="_replyto" class="form-input" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea id="message" name="message" class="form-input" rows="5" placeholder="What's on your mind?" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="New contact from your website">
+                    <button type="submit" class="btn btn-primary btn-block">Send message</button>
+                </form>
             </div>
         </div>
     </section>
@@ -427,15 +371,15 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Minal</p>
-                <div class="footer-links">
+            <div class="footer-inner">
+                <span class="footer-copy">&copy; 2025 Minal</span>
+                <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
-                </div>
+                </nav>
             </div>
         </div>
     </footer>

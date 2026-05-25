@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Test</title>
+</head>
+<body>
+    <h1>Simple Form Test</h1>
+    <form action="https://formspree.io/f/xrbyywqd" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" name="_replyto" required><br><br>
+        
+        <label>Message:</label><br>
+        <textarea name="message" required></textarea><br><br>
+        
+        <input type="hidden" name="_subject" value="Test form submission">
+        <button type="submit">Send Test</button>
+    </form>
+    
+    <p><strong>Instructions:</strong></p>
+    <ol>
+        <li>Fill out this form and submit it</li>
+        <li>You should be redirected to a Formspree thank you page</li>
+        <li>Check minal.shalam@gmail.com for a confirmation email</li>
+        <li>Click the confirmation link in that email</li>
+        <li>Then try the main website form again</li>
+    </ol>
+</body>
+</html>
